@@ -10,6 +10,7 @@ class PostsModel extends Model
     use HasFactory;
 
     protected $table = "posts";
+	public $timestamps = false;
     
     protected $fillable = [
 	    'id', 

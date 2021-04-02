@@ -18,11 +18,7 @@ class CreatePostsTable extends Migration
             $table->integer('userId')->unsigned(); 
             $table->string('title', 255)->nullable(false);
             $table->string('content', 255)->nullable(false);
-            /*
-                A  - ALERT
-                M  - MESSAGE
-             */
-            $table->enum('type', ['A', 'M']);
+            $table->enum('type', ['Alert', 'Message']);
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP'));
         });
